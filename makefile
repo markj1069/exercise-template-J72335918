@@ -114,13 +114,16 @@ dist:
 check:
 	@echo "check:"
 
+# Select which license you wish to publish under and
+# replace filename doc/license/CC-BY-SA-4-0.mkd
+# with the filename you want.
 LICENSE: doc/license/CC-BY-SA-4-0.mkd
-	@bin/build-license.sh CC-BY-SA-4-0.mkd
+	@bin/build-license.sh doc/license/CC-BY-SA-4-0.mkd
 
-MANIFEST: doc/MANIFEST.mkd
+MANIFEST: doc/manifest.mkd
 	@bin/build-manifest.sh
 
-README: doc/README.mkd
+README: doc/readme.mkd
 	@bin/build-readme.sh
 
 installcheck:

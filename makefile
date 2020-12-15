@@ -109,9 +109,19 @@ dvi:
 
 dist:
 	@echo "dist:"
+	bin
 
 check:
 	@echo "check:"
+
+LICENSE: doc/license/CC-BY-SA-4-0.mkd
+	@bin/build-license.sh CC-BY-SA-4-0.mkd
+
+MANIFEST: doc/MANIFEST.mkd
+	@bin/build-manifest.sh
+
+README: doc/README.mkd
+	@bin/build-readme.sh
 
 installcheck:
 	@echo "installcheck:"
@@ -129,7 +139,7 @@ veryclean:
 	@echo "veryclean:"
 
 manifest:
-	@echo "manifest:"
+	bin/build-manifest.sh
 
 distdir:
 	@echo "distdir:"
